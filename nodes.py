@@ -16,7 +16,7 @@ You are a helpful assistant that can use tools to answer questions.
 """
 
 # defining our agent reasoning node
-def run_agent_reasoning(state: MessagesState): -> MessagesState
+def run_agent_reasoning(state: MessagesState) -> MessagesState:
     # make an LLM call with the user input
     # the LLM will do most of the heavy lifting becos it is binded with the tools
         # (the tools we binded it with in react.py?)
