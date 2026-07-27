@@ -15,8 +15,9 @@ def triple(num:float) -> float:
     """
     return float(num) * 3
 
+# list of tools that we will supply to the llm
 tools = [TavilySearch(max_results = 1), triple]
 
 # utilize Function Calling
-# initialize an llm and supply it with the tools
+# initialize an llm and supply it with the tools via bind_tools
 llm = ChatOpenAI(model="gpt-4o-mini", temperature=0).bind_tools(tools)
